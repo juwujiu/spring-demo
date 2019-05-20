@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="demo.dao.TryDao">
+  <select id="test" resultType="java.util.Date">
+    select now();
+  </select>
+
+  <select id="paramTest" resultType="demo.entity.TestBean">
+    select * from t1
+    <if test="bean.id != null">
+      where t1.id in (#{bean.id})
+    </if>
+  </select>
+</mapper>
