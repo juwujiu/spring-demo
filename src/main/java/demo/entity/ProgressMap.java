@@ -20,7 +20,7 @@ public class ProgressMap
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @param info ProgressInfo
      * @return
@@ -40,7 +40,7 @@ public class ProgressMap
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @param envName String
      * @return

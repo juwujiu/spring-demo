@@ -22,7 +22,7 @@ public class MyException extends RuntimeException
 
     /**
      * 自定义异常处理
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月28日
      * @param msg String
      * @throws ServletException

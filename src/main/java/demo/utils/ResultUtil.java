@@ -18,7 +18,7 @@ public class ResultUtil
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @param object Object
      * @return Result
@@ -32,7 +32,7 @@ public class ResultUtil
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @return Result
      */
@@ -51,7 +51,7 @@ public class ResultUtil
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @param code Integer
      * @param msg String

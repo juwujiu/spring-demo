@@ -29,7 +29,7 @@ public class MainApp
 
     /**
      * mian方法 尽量与配置项解耦
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @param args String[]
      */

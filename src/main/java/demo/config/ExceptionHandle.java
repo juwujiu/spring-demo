@@ -26,7 +26,7 @@ public class ExceptionHandle
 
     /**
      * Exception类异常处理
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @param e Exception
      * @return Result

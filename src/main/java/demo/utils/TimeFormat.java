@@ -346,7 +346,7 @@ public class TimeFormat
 
     /**
      * 按照format格式化日期
-     * @author lWX605537
+     * @author cutter
      * @date 2019年4月8日
      * @param date Date
      * @param format String

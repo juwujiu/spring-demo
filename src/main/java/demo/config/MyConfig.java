@@ -30,7 +30,7 @@ public class MyConfig implements WebMvcConfigurer
 
     /**
      * 添加拦截器
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月20日
      * @param registry
      */
@@ -43,7 +43,7 @@ public class MyConfig implements WebMvcConfigurer
 
     /**
      * 添加过滤器
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @return FilterRegistrationBean
      */
@@ -59,7 +59,7 @@ public class MyConfig implements WebMvcConfigurer
 
     /**
      * 添加监听器
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @return ServletListenerRegistrationBean
      */
@@ -74,7 +74,7 @@ public class MyConfig implements WebMvcConfigurer
 
     /**
      * 添加websocket支持
-     * @author lWX605537
+     * @author cutter
      * @date 2019年3月27日
      * @return ServerEndpointExporter
      */
@@ -86,7 +86,7 @@ public class MyConfig implements WebMvcConfigurer
 
     /**
      * 添加pagehelper分页插件
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @return PageInterceptor
      */

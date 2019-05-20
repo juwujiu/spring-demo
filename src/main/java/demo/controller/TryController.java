@@ -29,7 +29,7 @@ public class TryController
 
     /**
      * 使Monitor服务获取vpn所在机器的访问权限
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月13日
      * @param user String
      * @param password String
@@ -73,7 +73,7 @@ public class TryController
 
     /**
      * 重启ping脚本
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月13日
      * @param apsIp String
      * @param testIp String
@@ -114,7 +114,7 @@ public class TryController
 
     /**
      * 本机运行bat文件
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月13日
      * @param msg String msg
      * @return Boolean
@@ -147,7 +147,7 @@ public class TryController
 
     /**
      * 写入标志位
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月13日
      * @param orderFile String
      * @return Boolean
@@ -162,7 +162,7 @@ public class TryController
 
     /**
      * 写入脚本
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月13日
      * @param script Array<String>
      * @param orderFile String

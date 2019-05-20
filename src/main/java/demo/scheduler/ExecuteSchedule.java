@@ -20,7 +20,7 @@ public class ExecuteSchedule
 
     /**
      * 测试定时任务间隔
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月26日
      */
     @Scheduled(cron = "0 */2 * * * ?")

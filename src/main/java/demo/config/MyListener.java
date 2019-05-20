@@ -19,7 +19,7 @@ public class MyListener implements HttpSessionListener
 
     /**
      * 创建session
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月28日
      * @param se
      */
@@ -32,7 +32,7 @@ public class MyListener implements HttpSessionListener
 
     /**
      * 销毁session
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月28日
      * @param se
      */

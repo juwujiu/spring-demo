@@ -25,7 +25,7 @@ public class MyFilter implements Filter
 
     /**
      * 初始化过滤器
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月28日
      * @param filterConfig
      * @throws ServletException
@@ -39,7 +39,7 @@ public class MyFilter implements Filter
 
     /**
      * 添加过滤器操作
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月28日
      * @param request
      * @param response
@@ -64,7 +64,7 @@ public class MyFilter implements Filter
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年11月28日
      */
     @Override

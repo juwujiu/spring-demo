@@ -22,7 +22,7 @@ public interface TryDao
 {
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月11日
      * @return
      * @return String
@@ -31,7 +31,7 @@ public interface TryDao
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2019年4月1日
      * @param bean
      * @param id2
