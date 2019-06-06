@@ -6,11 +6,11 @@
 // import
 // org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 //
-/// ****
-// * 功能描述：静态资源路由--该方法在spring5.0已被废弃,不推荐使用
+/// *****
+// * 功能描述：静态资源路由--该方法在spring5.0已被废弃,不推荐使用*
 // * @逻辑说明：TODO 增加描述代码逻辑
 // * @牵涉到的配置项：TODO 如果代码中逻辑中牵涉到配置项在这里列出
-// * @编码实现人员 lWX605537
+// * @编码实现人员 cutter
 // * @需求提出人员 TODO 填写需求提出人员
 // * @实现日期 2018年12月6日
 // * @版本 TODO 填写版本

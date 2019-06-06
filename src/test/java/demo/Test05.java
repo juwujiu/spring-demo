@@ -19,7 +19,7 @@ import demo.utils.Xml2Json;
  * 功能描述：TODO 增加描述代码功能
  * @逻辑说明：TODO 增加描述代码逻辑
  * @牵涉到的配置项：TODO 如果代码中逻辑中牵涉到配置项在这里列出
- * @编码实现人员 lWX605537
+ * @编码实现人员 cutter
  * @需求提出人员 TODO 填写需求提出人员
  * @实现日期 2018年12月29日
  * @版本 TODO 填写版本
@@ -31,7 +31,7 @@ public class Test05
 
     /**
      * TODO 增加功能描述
-     * @author lWX605537
+     * @author cutter
      * @date 2018年12月29日
      * @param args
      * @throws IOException

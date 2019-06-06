@@ -34,7 +34,9 @@ public class Test14
         for (Object object : jArray)
         {
             JSONObject jObject = (JSONObject) object;
-            System.out.print(jObject.get("projectId"));
+            System.out.print(jObject.get("envId"));
+            System.out.print("\t");
+            System.out.print(jObject.get("visitVolume"));
             System.out.print("\t");
             System.out.println(jObject.get("projectName"));
         }
