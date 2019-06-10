@@ -5,6 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
+/**
+ * 功能描述：数据库连接配置
+ * @编码实现人员 cutter
+ * @实现日期 2019年6月10日
+ */
 @Configuration
 @PropertySource("classpath:application.properties")
 public class DataSource

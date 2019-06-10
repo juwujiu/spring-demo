@@ -11,6 +11,11 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.TransactionManagementConfigurer;
 
+/**
+ * 功能描述：mybatis配置
+ * @编码实现人员 lWX605537
+ * @实现日期 2019年6月10日
+ */
 public class Mybatis implements TransactionManagementConfigurer
 {
     @Autowired

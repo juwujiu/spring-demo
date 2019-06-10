@@ -11,11 +11,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
 
@@ -34,19 +31,11 @@ import org.springframework.web.multipart.MultipartFile;
 
 import demo.dao.Test2Dao;
 import demo.dao.TryDao;
-import demo.entity.TestBean;
-import demo.utils.ExcelUtil;
 
 /**
  * 功能描述：TODO 增加描述代码功能
- * @逻辑说明：TODO 增加描述代码逻辑
- * @牵涉到的配置项：TODO 如果代码中逻辑中牵涉到配置项在这里列出
  * @编码实现人员 cutter
- * @需求提出人员 TODO 填写需求提出人员
  * @实现日期 2018年12月20日
- * @版本 TODO 填写版本
- * @修改历史 TODO 新建的时候留空 修改的时候为格式：什么人 什么时候 因为什么 修改了什么 编码实现人员： 需求提出人员： 实现日期： 版本：
- *       修改内容： ------------------------------------------------
  */
 @RestController
 public class T01Controller
@@ -184,42 +173,6 @@ public class T01Controller
             e.printStackTrace();
         }
         return new Date();
-    }
-
-    @PostMapping("/test1")
-    public String test1(TestBean testBean)
-    {
-        List<TestBean> infos = new ArrayList<>();
-        infos.add(testBean);
-
-        ExcelUtil<TestBean> excel = new ExcelUtil<>();
-        // 设置Excel表头
-        LinkedHashMap<String, String> headerField = new LinkedHashMap<String, String>();
-        // 项目
-        headerField.put("id", "id");
-        // 环境
-        headerField.put("status", "status");
-
-        // 设置excel页签名称
-        Map<String, String> param = new HashMap<String, String>();
-        String sheetName = "\u7528\u6237\u9884\u7ea6\u8bb0\u5f55";
-        param.put("sheetName", sheetName);
-        param.put("reqType", "exportAppointmentRecord");
-        param.put("pattern", "yyyy-MM-dd HH:mm");
-        response.setHeader("Connection", "close");
-        response.setHeader("Content-Type", "application/vnd.ms-excel;charset=utf-8");
-        // 设置excel文件名
-        String fileName = "AppointmentRecord.xlsx";
-        response.setHeader("Content-Disposition", "attachment;filename=" + fileName);
-        try
-        {
-            excel.exportExcel(headerField, infos, response.getOutputStream(), param);
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
-        return "成功";
     }
 
     @PostMapping("/test3")

@@ -1,8 +1,5 @@
 package demo.entity;
 
-/**
- * 用户环境登陆记录VO 编码实现人员：lwx450772 需求提出人员： 实现日期：2018-11-29
- */
 public class LoginAppRecord
 {
     private String projectId;

@@ -13,9 +13,6 @@ import java.util.jar.JarFile;
 
 import lombok.extern.slf4j.Slf4j;
 
-/**
- * Created by yihui on 2017/8/19.
- */
 @Slf4j
 public class PkgUtil
 {

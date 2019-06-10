@@ -17,6 +17,11 @@ import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 
+/**
+ * 功能描述：http连接配置
+ * @编码实现人员 cutter
+ * @实现日期 2019年6月10日
+ */
 @Configuration
 @ConditionalOnClass(value = { RestTemplate.class, HttpClient.class })
 public class RestTemplateConfiguration

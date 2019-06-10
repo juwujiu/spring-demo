@@ -8,10 +8,6 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PropertiesLoaderUtils;
 
-/**
- * Author: Starry.Teng Email: tengxing7452@163.com Date: 17-7-17 Time: 下午4:32
- * Describe: 属性文件工具类
- */
 public class PropertiesUtil
 {
     private static final Logger logger = Logger.getLogger(PropertiesUtil.class);
