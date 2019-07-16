@@ -76,7 +76,7 @@ public class RequestNet
         String url = "";
         String result = "";
         // 第一步。获取class文件
-        Class clazz = obj.getClass();
+        Class<?> clazz = obj.getClass();
         System.out.println("test class 名字：" + clazz.getSimpleName());
         // 第二部，注解都是在方法上的，获取所有的方法
         Method[] methods = clazz.getMethods();

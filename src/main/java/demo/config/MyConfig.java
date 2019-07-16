@@ -42,9 +42,9 @@ public class MyConfig implements WebMvcConfigurer
      * @return FilterRegistrationBean
      */
     @Bean
-    public FilterRegistrationBean filterRegistr()
+    public FilterRegistrationBean<?> filterRegistr()
     {
-        FilterRegistrationBean bean = new FilterRegistrationBean();
+        FilterRegistrationBean<MyFilter> bean = new FilterRegistrationBean<>();
         bean.setFilter(new MyFilter());
         bean.addUrlPatterns("/*");
         System.err.println("过滤器已添加");
@@ -58,9 +58,9 @@ public class MyConfig implements WebMvcConfigurer
      * @return ServletListenerRegistrationBean
      */
     @Bean
-    public ServletListenerRegistrationBean listenerRegist()
+    public ServletListenerRegistrationBean<MyListener> listenerRegist()
     {
-        ServletListenerRegistrationBean bean = new ServletListenerRegistrationBean();
+        ServletListenerRegistrationBean<MyListener> bean = new ServletListenerRegistrationBean<>();
         bean.setListener(new MyListener());
         System.err.println("监听器已添加");
         return bean;

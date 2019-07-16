@@ -23,7 +23,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 // classpath:mapper/*.xml,classpath:mapper/user/*.xml" })
 public class MainApp
 {
-
     /**
      * mian方法 尽量与配置项解耦
      * @author cutter
@@ -36,5 +35,4 @@ public class MainApp
         app.run(args);
         System.err.println("--------启动完成!--------");
     }
-
 }

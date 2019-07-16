@@ -77,7 +77,7 @@ public class PkgUtil
         }
 
         String className;
-        Class clz;
+        Class<?> clz;
         for (File f : dirfiles)
         {
             if (f.isDirectory())

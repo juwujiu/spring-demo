@@ -4,6 +4,10 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.util.StringUtils;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -31,14 +35,20 @@ public class Test14
             e.printStackTrace();
         }
         JSONArray jArray = JSONArray.parseArray(all);
+        Map<String, String> map = new HashMap<>();
         for (Object object : jArray)
         {
             JSONObject jObject = (JSONObject) object;
-            System.out.print(jObject.get("envId"));
-            System.out.print("\t");
-            System.out.print(jObject.get("visitVolume"));
-            System.out.print("\t");
-            System.out.println(jObject.get("projectName"));
+            String key = (String) jObject.keySet().toArray()[0];
+            String value = (String) jObject.values().toArray()[0];
+            map.put(key, value);
+        }
+        for (String str : map.keySet())
+        {
+            if (!StringUtils.isEmpty(map.get(str)))
+            {
+                System.out.println("update temp_project set owner = '" + map.get(str) + "' where id = '" + str + "';");
+            }
         }
     }
 }

@@ -34,6 +34,7 @@ public class NameRule
             }
             System.out.println(str2);
         }
+        bReader1.close();
     }
 
 }

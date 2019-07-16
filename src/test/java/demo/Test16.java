@@ -12,7 +12,7 @@ public class Test16
 {
     private static final SimpleDateFormat SDF = new SimpleDateFormat("yyyy/MM/dd");
 
-    private static final Map<String, String> DATE_MAP = new HashMap()
+    private static final Map<String, String> DATE_MAP = new HashMap<String, String>()
     {
         {
             put("MM/dd/yyyy", "\\d{2}/\\d{2}/\\d{4}");

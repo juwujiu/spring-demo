@@ -10,14 +10,13 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TimeZone;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -31,6 +30,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import demo.dao.Test2Dao;
 import demo.dao.TryDao;
+import demo.entity.TestBean;
 
 /**
  * 功能描述：TODO 增加描述代码功能
@@ -49,7 +49,7 @@ public class T01Controller
     @Autowired
     private Test2Dao test2Dao;
 
-    @RequestMapping(value = "/test5", produces = { "application/json" }, method = RequestMethod.POST)
+    @RequestMapping(value = "/test5", produces = {"application/json"}, method = RequestMethod.POST)
     public Date test5(@RequestBody MultipartFile file, @RequestParam(value = "type", required = false) String type,
             @RequestParam(value = "version", required = false) String version)
     {
@@ -176,12 +176,9 @@ public class T01Controller
     }
 
     @PostMapping("/test3")
-    public String test3(long time)
+    public String test3(@RequestBody @Valid TestBean testBean)
     {
-        TimeZone tz = TimeZone.getTimeZone("ETC/GMT-8");
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        df.setTimeZone(tz);
-        return df.format(time);
+        return testBean.getId() + testBean.getStatus();
     }
 
     /**
@@ -203,7 +200,6 @@ public class T01Controller
         {
             BufferedInputStream bis = null;
             BufferedOutputStream bos = null;
-
             // 获取下载文件路径
             String downLoadPath = "D:/image/20190327/142541.png";
             // 获取文件的长度
@@ -236,5 +232,4 @@ public class T01Controller
         }
         return "success";
     }
-
 }

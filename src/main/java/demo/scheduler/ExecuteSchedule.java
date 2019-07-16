@@ -11,16 +11,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class ExecuteSchedule
 {
-
     /**
      * 测试定时任务间隔
      * @author cutter
      * @date 2018年12月26日
      */
-    @Scheduled(cron = "0 */2 * * * ?")
+    @Scheduled(cron = "0 * */2 * * ?")
     public void tesk()
     {
         System.out.println("已执行");
     }
-
 }

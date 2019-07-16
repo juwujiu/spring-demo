@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class CleanFile
 {
-    private final static Set<String> dirs = new HashSet()
+    private final static Set<String> dirs = new HashSet<String>()
     {
         {
             add("D:/temp");
@@ -15,7 +15,7 @@ public class CleanFile
         }
     };
 
-    private final static Set<String> removeDirs = new HashSet()
+    private final static Set<String> removeDirs = new HashSet<String>()
     {
         {
             add("All Users");
@@ -26,7 +26,7 @@ public class CleanFile
         }
     };
 
-    private final static Set<String> preDirs = new HashSet()
+    private final static Set<String> preDirs = new HashSet<String>()
     {
         {
             add("All Users");

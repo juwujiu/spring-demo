@@ -10,7 +10,7 @@ import demo.inter.EmployeeSex;
 
 public class EmployeeInfoUtil
 {
-    public static Map getEmployeeInfo(Class<?> clazz)
+    public static Map<String, String> getEmployeeInfo(Class<?> clazz)
     {
         HashMap<String, String> info = new HashMap<>();
         Field[] fields = clazz.getDeclaredFields();// 获取类成员变量

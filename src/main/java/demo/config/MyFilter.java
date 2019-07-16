@@ -9,16 +9,16 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
-import demo.utils.PropertiesUtil;
+import org.springframework.stereotype.Component;
 
 /**
  * 功能描述：自定义过滤器
  * @编码实现人员 cutter
  * @实现日期 2018年11月28日
  */
+@Component
 public class MyFilter implements Filter
 {
-
     /**
      * 初始化过滤器
      * @author cutter
@@ -63,7 +63,8 @@ public class MyFilter implements Filter
         // HttpSession session = request.getSession();
         // String currPath = request.getRequestURI();
         // response.sendRedirect("/error");
-        System.out.println(PropertiesUtil.prop("spring.application.name"));
+        // 获取配置文件数据
+        // System.out.println(PropertiesUtil.prop("spring.application.name"));
         chain.doFilter(sRequest, sResponse);
     }
 
