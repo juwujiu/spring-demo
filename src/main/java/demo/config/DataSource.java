@@ -11,7 +11,7 @@ import org.springframework.context.annotation.PropertySource;
  * @实现日期 2019年6月10日
  */
 @Configuration
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:application.yaml")
 public class DataSource
 {
     @Bean

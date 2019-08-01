@@ -1,11 +1,18 @@
 package demo.config;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Properties;
 
+import org.apache.kafka.clients.admin.AdminClientConfig;
+import org.apache.kafka.clients.admin.NewTopic;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.kafka.annotation.EnableKafka;
+import org.springframework.kafka.core.KafkaAdmin;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
@@ -18,9 +25,17 @@ import com.github.pagehelper.PageInterceptor;
  * @实现日期 2018年11月28日
  */
 @Configuration
-@SuppressWarnings({ "rawtypes", "unchecked" })
+@EnableKafka
 public class MyConfig implements WebMvcConfigurer
 {
+    @Value("${spring.kafka.bootstrap-servers}")
+    private String bootstrapServer;
+    @Value("${spring.kafka.topic.Name}")
+    private String topicName;
+    @Value("${spring.kafka.topic.numPartitions}")
+    private int numPartitions;
+    @Value("${spring.kafka.topic.replicationFactor}")
+    private int replicationFactor;
 
     /**
      * 添加拦截器
@@ -103,5 +118,20 @@ public class MyConfig implements WebMvcConfigurer
         properties.setProperty("helperDialect", "oracle");
         pageHelper.setProperties(properties);
         return pageHelper;
+    }
+
+    @Bean
+    public KafkaAdmin kafkaAdmin()
+    {
+        Map<String, Object> configs = new HashMap<>();
+        configs.put(AdminClientConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServer);
+        return new KafkaAdmin(configs);
+    }
+
+    @Bean
+    public NewTopic myTopic()
+    {
+        // 第三个参数是副本数量，确保集群中配置的数目大于等于副本数量
+        return new NewTopic(topicName, numPartitions, (short) replicationFactor);
     }
 }

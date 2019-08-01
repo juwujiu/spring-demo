@@ -1,0 +1,47 @@
+eureka:
+    client:
+        fetch-registry: true
+        register-with-eureka: true
+        service-url:
+            defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+    instance:
+        hostname: localhost
+logging:
+    level:
+        demo:
+            dao: debug
+mybatis:
+    mapper-locations: classpath*:demo/*/*.xml
+remote:
+    connectTimeout: 2000
+    maxConnectPerRoute: 200
+    readTimeout: 3000
+server:
+    port: 443
+    ssl:
+        key-alias: tomcat
+        key-store: D:/keys/tomcat.keystore
+        key-store-password: 123456
+        key-store-type: JKS
+Log4jContextSelector:
+    org.apache.logging.log4j.core.async.AsyncLoggerContextSelector
+spring:
+    application:
+        name: data-controller
+    kafka:
+        producer:
+          key-serializer: org.apache.kafka.common.serialization.StringSerializer
+          value-serializer: org.apache.kafka.common.serialization.StringSerializer
+          bootstrap-servers: localhost:9092
+        bootstrap-servers: localhost:9092
+        topic:
+          Name: home.bus.log
+          numPartitions: 2
+          replicationFactor: 2
+        consumer:
+          group-id: home.bus.log.group.1
+          auto-offset-reset: latest
+          enable-auto-commit: true
+          auto-commit-interval: 20000
+          key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+          value-deserializer: org.apache.kafka.common.serialization.StringDeserializer

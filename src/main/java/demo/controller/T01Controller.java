@@ -16,7 +16,6 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -30,13 +29,15 @@ import org.springframework.web.multipart.MultipartFile;
 
 import demo.dao.Test2Dao;
 import demo.dao.TryDao;
-import demo.entity.TestBean;
+import demo.service.KafkaService;
+import lombok.extern.java.Log;
 
 /**
  * 功能描述：TODO 增加描述代码功能
  * @编码实现人员 cutter
  * @实现日期 2018年12月20日
  */
+@Log
 @RestController
 public class T01Controller
 {
@@ -48,6 +49,8 @@ public class T01Controller
     private TryDao tryDao;
     @Autowired
     private Test2Dao test2Dao;
+    @Autowired
+    private KafkaService kafkaService;
 
     @RequestMapping(value = "/test5", produces = {"application/json"}, method = RequestMethod.POST)
     public Date test5(@RequestBody MultipartFile file, @RequestParam(value = "type", required = false) String type,
@@ -153,7 +156,7 @@ public class T01Controller
         map1.put(1, 11);
         map1.put(2, 22);
         map1.put(3, 33);
-        map1 = null;
+        log.info("完成");
         return map1;
     }
 
@@ -176,9 +179,10 @@ public class T01Controller
     }
 
     @PostMapping("/test3")
-    public String test3(@RequestBody @Valid TestBean testBean)
+    public String test3(String msg)
     {
-        return testBean.getId() + testBean.getStatus();
+        kafkaService.sendChannelMess("seckill", msg);
+        return msg;
     }
 
     /**

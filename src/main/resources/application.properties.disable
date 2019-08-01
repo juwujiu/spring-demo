@@ -12,7 +12,6 @@
 #spring.datasource.driver-class-name=oracle.jdbc.driver.OracleDriver
 #mybatis
 mybatis.mapper-locations=classpath*:demo/*/*.xml
-#mybatis.typeAliasesPackage=demo.dao.*
 logging.level.demo.dao=debug
 server.port=8080
 #http.port=8443
@@ -24,11 +23,6 @@ server.ssl.key-store=D:/keys/tomcat.keystore
 server.ssl.key-store-type=JKS
 server.ssl.key-alias=tomcat
 server.ssl.key-store-password=123456
-
-#pagehelper.helperDialect=oracle
-##pagehelper.reasonable=true
-#pagehelper.supportMethodsArguments=true
-#pagehelper.params=count=countSql
 
 spring.application.name=data-controller
 eureka.instance.hostname=localhost
