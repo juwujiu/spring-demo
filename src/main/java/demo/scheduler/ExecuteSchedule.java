@@ -16,7 +16,7 @@ public class ExecuteSchedule
      * @author cutter
      * @date 2018年12月26日
      */
-    @Scheduled(cron = "0 * */2 * * ?")
+    @Scheduled(cron = "0 * */20 * * ?")
     public void tesk()
     {
         System.out.println("已执行");

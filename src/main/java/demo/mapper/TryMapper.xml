@@ -7,8 +7,11 @@
 
   <select id="paramTest" resultType="demo.entity.TestBean">
     select * from t1
-    <if test="bean.id != null">
-      where t1.id in (#{bean.id})
-    </if>
+    <where>
+      id in 
+      <foreach collection="ids" item="id" separator="," open="(" close=")">
+        #{item}
+      </foreach>
+    </where>
   </select>
 </mapper>

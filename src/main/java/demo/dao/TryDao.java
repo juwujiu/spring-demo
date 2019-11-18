@@ -9,13 +9,14 @@ import demo.entity.TestBean;
 
 /**
  * 功能描述：TODO 增加描述代码功能
+ * 
  * @编码实现人员 cutter
  * @实现日期 2018年12月11日
  */
-public interface TryDao
-{
+public interface TryDao {
     /**
      * TODO 增加功能描述
+     * 
      * @author cutter
      * @date 2018年12月11日
      * @return
@@ -25,6 +26,7 @@ public interface TryDao
 
     /**
      * TODO 增加功能描述
+     * 
      * @author cutter
      * @date 2019年4月1日
      * @param bean
@@ -32,5 +34,5 @@ public interface TryDao
      * @return
      * @return TestBean
      */
-    List<TestBean> paramTest(@Param("bean") TestBean bean, @Param("id2") String id2);
+    List<TestBean> paramTest(@Param("ids") List<String> ids);
 }
